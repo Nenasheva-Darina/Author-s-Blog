@@ -12,4 +12,4 @@ export const App = () => {
 	);
 };
 
-// json-server --watch db.json --port 3004
+// json-server --watch src/db.json --port 3005
