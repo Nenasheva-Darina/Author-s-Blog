@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import styled from 'styled-components';
 
 const Div = styled.div`
@@ -7,7 +9,11 @@ const Div = styled.div`
 export const App = () => {
 	return (
 		<Div>
-			<div></div>
+			<FontAwesomeIcon
+				icon={faEnvelope}
+				style={{ fontSize: '24px', color: 'blue' }}
+			/>
+			<div>123</div>
 		</Div>
 	);
 };
