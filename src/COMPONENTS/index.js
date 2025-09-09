@@ -6,3 +6,4 @@ export * from './INPUT/input';
 export * from './BUTTON/button';
 export * from './H2/h2';
 export * from './ERROR/AuthFormError';
+export * from './CONTENT/content';

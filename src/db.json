@@ -4,53 +4,32 @@
       "id": "001",
       "login": "anton",
       "password": "qwerty123",
-      "registed_ad": "2050-09-22",
-      "role_id": "123"
+      "registed_at": "2050-09-22",
+      "role_id": 0
     },
     {
-      "id": "00f3",
+      "id": "9897",
       "login": "ivan",
-      "password": "qwerty123",
-      "registed_at": "1979-09-28 21:34",
-      "role_id": 2
-    },
-    {
-      "id": "1517",
-      "login": "darina",
       "password": "123qwe",
-      "registed_at": "1993-12-28 04:46",
-      "role_id": 2
-    },
-    {
-      "id": "6de7",
-      "login": "darina2",
-      "password": "123qwe",
-      "registed_at": "1996-03-02 09:40",
-      "role_id": 2
-    },
-    {
-      "id": "f3f9",
-      "login": "ivan3",
-      "password": "qwerty123321",
-      "registed_at": "1975-05-02 02:47",
+      "registed_at": "2000-08-26 09:07",
       "role_id": 2
     }
   ],
   "roles": [
     {
-      "id": "0",
+      "id": 0,
       "name": "Администратор"
     },
     {
-      "id": "1",
+      "id": 1,
       "name": "Модератор"
     },
     {
-      "id": "2",
+      "id": 2,
       "name": "Читатель"
     },
     {
-      "id": "3",
+      "id": 3,
       "name": "Гость"
     }
   ],
