@@ -33,7 +33,7 @@
 - статьи
     - posts: id / title / image_url / content / published_at
 - комментарии
-    - comments: id / author_id / post_id / content
+    - comments: id / author_id / post_id / content / publishedAt
 
 СХЕМА СОСТОЯНИЯ НА BFF:
 

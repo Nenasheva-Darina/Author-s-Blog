@@ -1,3 +1,5 @@
 export * from './AUTHORIZATION/authorization';
 export * from './REGISTRATION/registration';
 export * from './USERS/users';
+export * from './POST/post';
+export * from '.';

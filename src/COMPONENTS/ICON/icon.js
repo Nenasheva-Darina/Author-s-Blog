@@ -10,7 +10,7 @@ const IconContainer = ({ className, name, ...props }) => (
 
 export const Icon = styled(IconContainer)`
 	font-size: ${({ size = '24px' }) => size};
-	margin-right: ${({ margin = '0px' }) => margin};
+	margin: ${({ margin = '0px' }) => margin};
 	color: ${({ disabled, color = '#000' }) => (disabled ? '#ccc' : color)};
 
 	&:hover {
