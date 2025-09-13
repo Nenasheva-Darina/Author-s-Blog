@@ -10,5 +10,5 @@ export * from './get-session';
 export * from './get-user';
 export * from './get-users';
 export * from './set-user-role';
-export * from '.';
+export * from './delete-comment';
 export * from '.';

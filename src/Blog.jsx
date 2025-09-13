@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import { Header, Footer } from './COMPONENTS';
+import { Header, Footer, Modal } from './COMPONENTS';
 import { Authorization, Registration, Users, Post } from './PAGES';
 import styled from 'styled-components';
 import { useLayoutEffect } from 'react';
@@ -54,6 +54,7 @@ export const Blog = () => {
 				</Routes>
 			</Page>
 			<Footer />
+			<Modal />
 		</AppColumn>
 	);
 };

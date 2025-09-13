@@ -7,7 +7,7 @@ export * from './logout';
 export * from './register';
 export * from './remove-user';
 export * from './update-user-role';
-export * from '.';
+export * from './remove-post-comment';
 export * from '.';
 export * from '.';
 export * from '.';
