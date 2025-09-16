@@ -27,6 +27,7 @@ const CommentContainer = ({ className, postId, id, author, content, publishedAt 
 				<div className="information-panel">
 					<div className="author">
 						<Icon
+							inactive={true}
 							name="circle-user"
 							margin="0 10px 0 10px"
 							size="18px"
@@ -38,6 +39,7 @@ const CommentContainer = ({ className, postId, id, author, content, publishedAt 
 					<div className="published-at">
 						{publishedAt}
 						<Icon
+							inactive={true}
 							name={['far', 'calendar']}
 							margin="0 8px 0 0"
 							size="18px"
