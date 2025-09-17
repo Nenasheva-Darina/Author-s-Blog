@@ -14,7 +14,7 @@ export * from './delete-comment';
 export * from './update-post';
 export * from './deiete-post';
 export * from './add-post';
-export * from '.';
+export * from './get-posts';
 export * from '.';
 export * from '.';
 export * from '.';

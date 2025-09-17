@@ -10,7 +10,7 @@ export * from './update-user-role';
 export * from './remove-post-comment';
 export * from './save-post';
 export * from './remove-post';
-export * from '.';
+export * from './fetch-posts';
 export * from '.';
 export * from '.';
 export * from '.';

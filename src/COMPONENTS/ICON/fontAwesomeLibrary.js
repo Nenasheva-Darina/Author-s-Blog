@@ -15,6 +15,7 @@ import {
 	faCalendar,
 	faPenToSquare,
 	faPaperPlane,
+	faComment,
 } from '@fortawesome/free-regular-svg-icons';
 
 library.add(
@@ -29,4 +30,5 @@ library.add(
 	faPenToSquare,
 	faPaperPlane,
 	faCircleUser,
+	faComment,
 );
