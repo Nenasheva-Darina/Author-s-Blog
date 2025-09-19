@@ -6,6 +6,7 @@ import {
 	faUsers,
 	faRightFromBracket,
 	faCircleUser,
+	faMagnifyingGlass,
 } from '@fortawesome/free-solid-svg-icons';
 
 import {
@@ -31,4 +32,5 @@ library.add(
 	faPaperPlane,
 	faCircleUser,
 	faComment,
+	faMagnifyingGlass,
 );

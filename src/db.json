@@ -287,6 +287,17 @@
         "registeredAt": "2050-09-22",
         "roleId": 0
       }
+    },
+    {
+      "hash": "0.89081178513231540350147952267434448003768920898438",
+      "user": {
+        "id": "001",
+        "login": "anton",
+        "password": "qwerty123",
+        "registeredAt": "2050-09-22",
+        "roleId": 0
+      },
+      "id": "q-IO4_r"
     }
   ]
 }
