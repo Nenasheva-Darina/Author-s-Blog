@@ -32,20 +32,16 @@ export const Pagination = styled(PaginationConteiner)`
 
 	& button {
 		margin: 0 5px;
-		// mi
-		// padding: 20px;
 	}
 
 	& .current-page {
 		width: 100%;
 		height: 32px;
+		margin: 0 5px;
 		font-size: 18px;
 		font-weight: 500;
 		line-height: 26px;
 		text-align: center;
 		border: 1px solid #000;
-		// mi
-		// padding: 7px;
-		// height: 100%;
 	}
 `;

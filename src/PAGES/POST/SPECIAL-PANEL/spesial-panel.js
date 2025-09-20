@@ -1,14 +1,18 @@
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { useServerRequest } from '../../../HOOKS';
 import { CLOSE_MODAL, openModal, removePostAsync } from '../../../ACTIONS';
 import { Icon } from '../../../COMPONENTS';
+import { checkAccess } from '../../../UTILS';
+import { ROLE } from '../../../CONSTANTS';
 import styled from 'styled-components';
+import { selectUserRole } from '../../../SELECTORS';
 
 const SpesialPanelContainer = ({ className, id, publishedAt, editButton }) => {
 	const dispatch = useDispatch();
 	const requestServer = useServerRequest();
 	const navigate = useNavigate();
+	const userRole = useSelector(selectUserRole);
 
 	const onPostRemove = (id) => {
 		dispatch(
@@ -24,6 +28,8 @@ const SpesialPanelContainer = ({ className, id, publishedAt, editButton }) => {
 			}),
 		);
 	};
+
+	const isAdmin = checkAccess([ROLE.ADMIN], userRole);
 	return (
 		<div className={className}>
 			<div className="published-at">
@@ -37,17 +43,19 @@ const SpesialPanelContainer = ({ className, id, publishedAt, editButton }) => {
 				)}
 				{publishedAt}
 			</div>
-			<div className="buttons">
-				{editButton}
-				{publishedAt && (
-					<Icon
-						name={['far', 'trash-can']}
-						margin="0 0 0 8px"
-						size="21px"
-						onClick={() => onPostRemove(id)}
-					/>
-				)}
-			</div>
+			{isAdmin && (
+				<div className="buttons">
+					{editButton}
+					{publishedAt && (
+						<Icon
+							name={['far', 'trash-can']}
+							margin="0 0 0 8px"
+							size="21px"
+							onClick={() => onPostRemove(id)}
+						/>
+					)}
+				</div>
+			)}
 		</div>
 	);
 };
