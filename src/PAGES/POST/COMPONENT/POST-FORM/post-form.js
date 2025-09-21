@@ -64,7 +64,7 @@ const PostFormContainer = ({
 				editButton={
 					<Icon
 						name={['far', 'floppy-disk']}
-						margin="-2px 0 0 0"
+						margin="-2px 5px 0 0"
 						onClick={onSave}
 					/>
 				}
