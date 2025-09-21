@@ -5,12 +5,16 @@ import {
 	faBackward,
 	faUsers,
 	faRightFromBracket,
+	faCircleUser,
 } from '@fortawesome/free-solid-svg-icons';
 
 import {
 	faFileLines,
 	faFloppyDisk,
 	faTrashCan,
+	faCalendar,
+	faPenToSquare,
+	faPaperPlane,
 } from '@fortawesome/free-regular-svg-icons';
 
 library.add(
@@ -21,4 +25,8 @@ library.add(
 	faRightFromBracket,
 	faTrashCan,
 	faFloppyDisk,
+	faCalendar,
+	faPenToSquare,
+	faPaperPlane,
+	faCircleUser,
 );
