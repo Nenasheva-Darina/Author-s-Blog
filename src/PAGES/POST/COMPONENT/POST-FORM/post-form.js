@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useLayoutEffect, useRef, useState } from 'react';
 import { Input } from '../../../../COMPONENTS';
 import { Icon } from '../../../../COMPONENTS';
 import { SpesialPanel } from '../../SPECIAL-PANEL/spesial-panel';
@@ -13,42 +13,58 @@ const PostFormContainer = ({
 	className,
 	post: { id, title, imageUrl, content, publishedAt },
 }) => {
-	const imageRef = useRef(null);
-	const titleRef = useRef(null);
+	const [imageUrlValue, setImageUrlValue] = useState(imageUrl);
+	const [titleValue, setTitleUrlValue] = useState(title);
 	const contentRef = useRef(null);
-	const reqestServer = useServerRequest();
+
+	useLayoutEffect(() => {
+		setImageUrlValue(imageUrl);
+		setTitleUrlValue(title);
+	}, [imageUrl, title]);
 
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
+	const reqestServer = useServerRequest();
 
 	const onSave = () => {
-		const newImageUrl = imageRef.current.value;
-		const newTitle = titleRef.current.value;
 		const newContent = sanizeContent(contentRef.current.innerHTML);
 
 		dispatch(
 			savePostAsync(reqestServer, {
 				id,
-				imageUrl: newImageUrl,
-				title: newTitle,
+				imageUrl: imageUrlValue,
+				title: titleValue,
 				content: newContent,
 			}),
-		).then(() => navigate(`/post/${id}`));
+		).then(({ id }) => navigate(`/post/${id}`));
 	};
+
+	const onImageChange = ({ target }) => setImageUrlValue(target.value);
+	const onTitleChange = ({ target }) => setTitleUrlValue(target.value);
 
 	return (
 		<div className={className}>
-			<Input ref={imageRef} defaultValue={imageUrl} placeholder="Изображение..." />
-			<Input ref={titleRef} defaultValue={title} placeholder="Заголовок..." />
+			{/* неуправляемые поля */}
+			<Input
+				value={imageUrlValue}
+				placeholder="Изображение..."
+				onChange={onImageChange}
+			/>
+			<Input
+				value={titleValue}
+				placeholder="Заголовок..."
+				onChange={onTitleChange}
+			/>
 
 			<SpesialPanel
+				id={id}
 				publishedAt={publishedAt}
 				content={content}
 				margin="20px 0"
 				editButton={
 					<Icon
 						name={['far', 'floppy-disk']}
-						margin="-2px 0  0 10px"
+						margin="-2px 0 0 0"
 						onClick={onSave}
 					/>
 				}
@@ -75,6 +91,8 @@ export const PostForm = styled(PostFormContainer)`
 	}
 
 	& .post-text {
+		min-height: 80px;
+		border: 1px solid #000;
 		font-size: 18px;
 		white-space: pre-line;
 	}
