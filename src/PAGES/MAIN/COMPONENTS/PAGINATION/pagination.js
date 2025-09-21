@@ -24,25 +24,28 @@ const PaginationConteiner = ({ className, page, lastPage, setPage }) => {
 export const Pagination = styled(PaginationConteiner)`
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	position: absolute;
+	bottom: 140px;
+	width: 100%;
 	margin: 0 0 20px;
 	padding: 0 35px;
 
 	& button {
 		margin: 0 5px;
-		padding: 20px;
+		// mi
+		// padding: 20px;
 	}
 
 	& .current-page {
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		width: 100%;
+		height: 32px;
 		font-size: 18px;
 		font-weight: 500;
-		width: 100%;
-		height: 100%;
+		line-height: 26px;
 		text-align: center;
 		border: 1px solid #000;
-		padding: 8px;
+		// mi
+		// padding: 7px;
+		// height: 100%;
 	}
 `;
