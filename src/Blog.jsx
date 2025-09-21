@@ -1,26 +1,29 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { Routes, Route } from 'react-router-dom';
+import { Header, Footer } from './COMPONENTS';
 import styled from 'styled-components';
 
+const AppColumn = styled.div`
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 1000px;
+	min-height: 100%;
+	margin: 0 auto;
+	background-color: #fff;
+`;
 const Content = styled.div`
-	padding: 120 px 0;
+	padding: 120px 0;
 `;
 const H2 = styled.div`
 	text-alight: center;
 `;
 
-const Header = () => <div>Шапка</div>;
-const Footer = () => <div>Футер</div>;
-
 export const Blog = () => {
 	return (
-		<>
+		<AppColumn>
 			<Header />
 			<Content>
-				<FontAwesomeIcon icon={faEnvelope} />
 				<H2>Контент страницы</H2>
-				<FontAwesomeIcon icon={faEnvelope} />
 				<Routes>
 					<Route path="/" element={<div>Главная страница</div>} />
 					<Route path="/login" element={<div>Авторизация</div>} />
@@ -31,9 +34,8 @@ export const Blog = () => {
 					<Route path="*" element={<div>Страница с ошибкой </div>} />
 				</Routes>
 			</Content>
-			<FontAwesomeIcon icon={faEnvelope} />
 			<Footer />
-		</>
+		</AppColumn>
 	);
 };
 
