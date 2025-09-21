@@ -1,0 +1,69 @@
+import { useState } from 'react';
+import { useServerRequest } from '../../../../HOOKS';
+import { Icon } from '../../../../COMPONENTS';
+import { TableRow } from '../TABLE-ROW/table-row';
+import styled from 'styled-components';
+
+const UserRowContainer = ({
+	id,
+	className,
+	login,
+	registeredAt,
+	roleId: userRoleId,
+	roles,
+	onUserRemove,
+}) => {
+	const [initialRoleId, setInitialRoleId] = useState(userRoleId);
+	const [selectedRoleId, setSelectedRoleId] = useState(userRoleId);
+	const requestServer = useServerRequest();
+
+	const onRoleChange = ({ target }) => {
+		setSelectedRoleId(Number(target.value));
+	};
+
+	const onRoleSave = (userId, newUserRoleId) => {
+		requestServer('updateUserRole', userId, newUserRoleId).then(() => {
+			setInitialRoleId(newUserRoleId);
+		});
+	};
+
+	const isSaButtonDisabled = selectedRoleId === initialRoleId;
+
+	return (
+		<div className={className}>
+			<TableRow border={true}>
+				<div className="login-column">{login}</div>
+				<div className="registered-at-column">{registeredAt}</div>
+				<div className="role-column">
+					<select value={selectedRoleId} onChange={onRoleChange}>
+						{roles.map(({ id: roleId, name: roleName }) => (
+							<option key={roleId} value={roleId}>
+								{roleName}
+							</option>
+						))}
+					</select>
+					<div className="save-role-button">
+						<Icon
+							name={['far', 'floppy-disk']}
+							margin="0 0 0 10px"
+							disabled={isSaButtonDisabled}
+							onClick={() => onRoleSave(id, selectedRoleId)}
+						/>
+					</div>
+				</div>
+			</TableRow>
+
+			<Icon name={['far', 'trash-can']} onClick={onUserRemove} />
+		</div>
+	);
+};
+
+export const UserRow = styled(UserRowContainer)`
+	display: flex;
+	margin-top: 10px;
+
+	& select {
+		font-size: 18px;
+		padding: 0 5px;
+	}
+`;

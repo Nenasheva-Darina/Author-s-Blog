@@ -7,6 +7,18 @@ import {
 	faRightFromBracket,
 } from '@fortawesome/free-solid-svg-icons';
 
-import { faFileLines } from '@fortawesome/free-regular-svg-icons';
+import {
+	faFileLines,
+	faFloppyDisk,
+	faTrashCan,
+} from '@fortawesome/free-regular-svg-icons';
 
-library.add(faCode, faBackward, faFileLines, faUsers, faRightFromBracket);
+library.add(
+	faCode,
+	faBackward,
+	faFileLines,
+	faUsers,
+	faRightFromBracket,
+	faTrashCan,
+	faFloppyDisk,
+);
