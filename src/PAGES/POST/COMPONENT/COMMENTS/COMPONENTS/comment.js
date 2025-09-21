@@ -1,4 +1,5 @@
 import { Icon } from '../../../../../COMPONENTS';
+import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { removeCommentAsync, openModal, CLOSE_MODAL } from '../../../../../ACTIONS';
 import { useServerRequest } from '../../../../../HOOKS';
@@ -91,3 +92,11 @@ export const Comment = styled(CommentContainer)`
 		display: flex;
 	}
 `;
+
+Comment.PropTypes = {
+	postId: PropTypes.string.isRequired,
+	id: PropTypes.string.isRequired,
+	author: PropTypes.string.isRequired,
+	content: PropTypes.string.isRequired,
+	publishedAt: PropTypes.string.isRequired,
+};
