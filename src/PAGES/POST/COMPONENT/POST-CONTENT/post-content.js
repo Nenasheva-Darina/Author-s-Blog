@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import { H2, Icon } from '../../../../COMPONENTS';
 import { SpesialPanel } from '../../SPECIAL-PANEL/spesial-panel';
 import styled from 'styled-components';
+import { PROP_TYPE } from '../../../../CONSTANTS';
 
 const PostContentContainer = ({
 	className,
@@ -45,3 +46,7 @@ export const PostContent = styled(PostContentContainer)`
 
 	//OK!
 `;
+
+PostContent.propTypes = {
+	post: PROP_TYPE.POST.isRequired,
+};

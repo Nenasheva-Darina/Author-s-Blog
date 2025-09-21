@@ -1,8 +1,10 @@
+import PropTypes from 'prop-types';
 import { useState } from 'react';
 import { useServerRequest } from '../../../../HOOKS';
 import { Icon } from '../../../../COMPONENTS';
 import { TableRow } from '../TABLE-ROW/table-row';
 import styled from 'styled-components';
+import { PROP_TYPE } from '../../../../CONSTANTS';
 
 const UserRowContainer = ({
 	id,
@@ -67,3 +69,12 @@ export const UserRow = styled(UserRowContainer)`
 		padding: 0 5px;
 	}
 `;
+
+UserRow.propTypes = {
+	id: PropTypes.string.isRequired,
+	login: PropTypes.string.isRequired,
+	registeredAt: PropTypes.string.isRequired,
+	roleId: PROP_TYPE.ROLE_ID.isRequired,
+	roles: PropTypes.arrayOf(PROP_TYPE.ROLE).isRequired,
+	onUserRemove: PropTypes.func.isRequired,
+};

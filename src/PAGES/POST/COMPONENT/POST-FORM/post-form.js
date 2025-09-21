@@ -8,6 +8,7 @@ import { useServerRequest } from '../../../../HOOKS';
 import styled from 'styled-components';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { PROP_TYPE } from '../../../../CONSTANTS';
 
 const PostFormContainer = ({
 	className,
@@ -103,3 +104,7 @@ export const PostForm = styled(PostFormContainer)`
 //contentEditable={true} -делает любой див редактируемым
 // suppressContentEditableWarning={true} - убирает предупреждения
 //white-space: pre-line; - что бы сработал перенос строки с использованием \n\n
+
+PostForm.propTypes = {
+	post: PROP_TYPE.POST.isRequired,
+};

@@ -8,17 +8,10 @@
       "role_id": 0
     },
     {
-      "id": "9897",
-      "login": "ivan",
-      "password": "123qwe",
-      "registed_at": "2000-08-26 09:07",
-      "role_id": 1
-    },
-    {
       "login": "das",
       "password": "123qwe",
       "registed_at": "1984-03-04 22:10",
-      "role_id": 2,
+      "role_id": 1,
       "id": "t50QLf-"
     }
   ],
@@ -261,18 +254,25 @@
       "id": "0mq6K82"
     },
     {
-      "author_id": "001",
-      "post_id": "002",
-      "published_at": "1992-05-23 16:22",
-      "content": "156",
-      "id": "nUnYYIu"
-    },
-    {
       "author_id": "9897",
       "post_id": "003",
       "published_at": "1971-08-12 10:02",
       "content": "sdsd",
       "id": "iziHMjj"
+    },
+    {
+      "author_id": "001",
+      "post_id": "c4b2",
+      "published_at": "1985-09-27 02:46",
+      "content": "00033000330033",
+      "id": "fWL-Liv"
+    },
+    {
+      "author_id": "001",
+      "post_id": "002",
+      "published_at": "1970-09-09 11:13",
+      "content": "56",
+      "id": "aND2w-v"
     }
   ],
   "sessions": [
@@ -321,7 +321,7 @@
       "id": "P7ig1FI"
     },
     {
-      "hash": "0.59836090984993817176729180573602207005023956298828",
+      "hash": "0.96986700962140026671676196201588027179241180419922",
       "user": {
         "id": "001",
         "login": "anton",
@@ -329,7 +329,7 @@
         "registeredAt": "2050-09-22",
         "roleId": 0
       },
-      "id": "h6z8P_Q"
+      "id": "F0ioZ-s"
     }
   ]
 }
